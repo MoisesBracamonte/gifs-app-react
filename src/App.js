@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
 
+/** Componentes bootstrap */
+import {Navbar, Container} from 'react-bootstrap';
+
+/** Componentes */
+import GiftExpert from './giftExpert';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Navbar bg="dark" className="p-3"> 
+        <Navbar.Brand href="#home" className="text-light">Brand link</Navbar.Brand>
+      </Navbar>
+      <Container className="mt-4">
+        <GiftExpert/>
+      </Container>
+    </Fragment>
   );
 }
 
